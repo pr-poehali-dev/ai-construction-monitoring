@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 
-const BIM_IMAGE = 'https://cdn.poehali.dev/projects/e377657a-cc08-441a-9835-c20eb1901452/files/246169f4-beb6-4b6d-b57c-89745cc2d202.jpg';
+const BIM_IMAGE = 'https://cdn.poehali.dev/projects/e377657a-cc08-441a-9835-c20eb1901452/files/6bc717df-a3fc-44a0-8709-c2d86d6b69eb.jpg';
 
 const NAV = [
   { id: 'overview', label: 'Aperçu', icon: 'LayoutDashboard' },
@@ -291,7 +291,7 @@ const Index = () => {
           {/* Analytics row */}
           <section className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
             {[
-              { title: 'Évolution de l\'avancement', val: '64%', stroke: 'hsl(184 80% 38%)', pts: [30, 34, 38, 41, 47, 52, 58, 64], hint: 'sur 8 semaines' },
+              { title: 'Évolution de l\'avancement', val: '64%', stroke: 'hsl(220 85% 52%)', pts: [30, 34, 38, 41, 47, 52, 58, 64], hint: 'sur 8 semaines' },
               { title: 'Clôture des réserves', val: '+11/sem', stroke: 'hsl(150 65% 38%)', pts: [4, 6, 5, 9, 7, 10, 8, 11], hint: 'rythme en hausse' },
               { title: 'Écart de délais', val: '−6 j', stroke: 'hsl(32 90% 46%)', pts: [-1, -2, -2, -3, -4, -4, -5, -6], hint: 'à surveiller' },
             ].map((c) => (

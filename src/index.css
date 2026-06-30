@@ -13,7 +13,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 35% 14%;
 
-    --primary: 184 80% 38%;
+    --primary: 220 85% 52%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 38% 94%;
@@ -33,18 +33,18 @@
 
     --border: 214 25% 88%;
     --input: 214 25% 88%;
-    --ring: 184 80% 38%;
+    --ring: 220 85% 52%;
 
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 222 25% 30%;
-    --sidebar-primary: 184 80% 38%;
+    --sidebar-primary: 220 85% 52%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 210 38% 95%;
     --sidebar-accent-foreground: 222 35% 18%;
     --sidebar-border: 214 25% 90%;
-    --sidebar-ring: 184 80% 38%;
+    --sidebar-ring: 220 85% 52%;
   }
 }
 
@@ -59,7 +59,7 @@
     background-image:
       radial-gradient(
         circle at 15% 0%,
-        hsl(184 80% 38% / 0.06),
+        hsl(220 85% 52% / 0.06),
         transparent 40%
       ),
       radial-gradient(
@@ -87,8 +87,8 @@
 @layer utilities {
   .grid-bg {
     background-image:
-      linear-gradient(hsl(184 80% 38% / 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(184 80% 38% / 0.04) 1px, transparent 1px);
+      linear-gradient(hsl(220 85% 52% / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(220 85% 52% / 0.04) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 
@@ -99,7 +99,7 @@
   }
 
   .glow-primary {
-    box-shadow: 0 8px 24px hsl(184 80% 38% / 0.2);
+    box-shadow: 0 8px 24px hsl(220 85% 52% / 0.2);
   }
 
   .animate-pulse-dot {
