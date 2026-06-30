@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 
-const BIM_IMAGE = 'https://cdn.poehali.dev/projects/e377657a-cc08-441a-9835-c20eb1901452/files/62cf16d6-7381-4bad-9a0f-929334169c17.jpg';
+const BIM_IMAGE = 'https://cdn.poehali.dev/projects/e377657a-cc08-441a-9835-c20eb1901452/files/246169f4-beb6-4b6d-b57c-89745cc2d202.jpg';
 
 const NAV = [
   { id: 'overview', label: 'Aperçu', icon: 'LayoutDashboard' },
