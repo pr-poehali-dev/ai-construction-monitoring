@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Icon from '@/components/ui/icon';
+import BIMViewer from '@/components/BIMViewer';
 
 const BIM_IMAGE = 'https://cdn.poehali.dev/projects/e377657a-cc08-441a-9835-c20eb1901452/files/6bc717df-a3fc-44a0-8709-c2d86d6b69eb.jpg';
 
@@ -79,9 +80,16 @@ function Sparkline({ points, stroke }: { points: number[]; stroke: string }) {
 
 const Index = () => {
   const [active, setActive] = useState('overview');
+  const [bimOpen, setBimOpen] = useState(false);
+
+  function handleNav(id: string) {
+    setActive(id);
+    if (id === 'bim') setBimOpen(true);
+  }
 
   return (
     <div className="min-h-screen flex text-foreground">
+      {bimOpen && <BIMViewer onClose={() => { setBimOpen(false); setActive('overview'); }} />}
       {/* Sidebar */}
       <aside className="hidden lg:flex flex-col w-64 shrink-0 border-r border-border bg-sidebar/80 backdrop-blur-xl sticky top-0 h-screen">
         <div className="px-6 py-6 border-b border-border">
@@ -99,7 +107,7 @@ const Index = () => {
           {NAV.map((n) => (
             <button
               key={n.id}
-              onClick={() => setActive(n.id)}
+              onClick={() => handleNav(n.id)}
               className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all ${
                 active === n.id
                   ? 'bg-primary/10 text-primary border border-primary/30'
