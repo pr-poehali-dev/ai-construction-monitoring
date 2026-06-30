@@ -4,41 +4,41 @@ import Icon from '@/components/ui/icon';
 const BIM_IMAGE = 'https://cdn.poehali.dev/projects/e377657a-cc08-441a-9835-c20eb1901452/files/62cf16d6-7381-4bad-9a0f-929334169c17.jpg';
 
 const NAV = [
-  { id: 'overview', label: 'Обзор', icon: 'LayoutDashboard' },
-  { id: 'bim', label: 'BIM-модель', icon: 'Box' },
-  { id: 'schedule', label: 'График работ', icon: 'CalendarRange' },
-  { id: 'tasks', label: 'Задачи', icon: 'ListChecks' },
-  { id: 'analytics', label: 'Аналитика', icon: 'TrendingUp' },
-  { id: 'reports', label: 'Отчёты', icon: 'FileBarChart' },
+  { id: 'overview', label: 'Aperçu', icon: 'LayoutDashboard' },
+  { id: 'bim', label: 'Maquette BIM', icon: 'Box' },
+  { id: 'schedule', label: 'Planning', icon: 'CalendarRange' },
+  { id: 'tasks', label: 'Tâches', icon: 'ListChecks' },
+  { id: 'analytics', label: 'Analytique', icon: 'TrendingUp' },
+  { id: 'reports', label: 'Rapports', icon: 'FileBarChart' },
 ];
 
 const KPIS = [
-  { label: 'Готовность объекта', value: '64', unit: '%', delta: '+3.2%', trend: 'up', color: 'primary' },
-  { label: 'Отклонение по срокам', value: '−6', unit: 'дн', delta: 'риск', trend: 'down', color: 'warning' },
-  { label: 'Открытых замечаний', value: '28', unit: '', delta: '−4', trend: 'up', color: 'accent' },
-  { label: 'Качество работ', value: '92', unit: '%', delta: '+1.1%', trend: 'up', color: 'success' },
+  { label: 'Avancement du chantier', value: '64', unit: '%', delta: '+3.2%', trend: 'up', color: 'primary' },
+  { label: 'Écart de délais', value: '−6', unit: 'j', delta: 'risque', trend: 'down', color: 'warning' },
+  { label: 'Réserves ouvertes', value: '28', unit: '', delta: '−4', trend: 'up', color: 'accent' },
+  { label: 'Qualité des travaux', value: '92', unit: '%', delta: '+1.1%', trend: 'up', color: 'success' },
 ];
 
 const STAGES = [
-  { name: 'Демонтаж', plan: 100, fact: 100, status: 'done' },
-  { name: 'Усиление конструкций', plan: 100, fact: 96, status: 'progress' },
-  { name: 'Инженерные сети', plan: 80, fact: 62, status: 'risk' },
-  { name: 'Фасадные работы', plan: 45, fact: 40, status: 'progress' },
-  { name: 'Внутренняя отделка', plan: 20, fact: 8, status: 'risk' },
-  { name: 'Благоустройство', plan: 0, fact: 0, status: 'wait' },
+  { name: 'Démolition', plan: 100, fact: 100, status: 'done' },
+  { name: 'Renforcement structurel', plan: 100, fact: 96, status: 'progress' },
+  { name: 'Réseaux techniques', plan: 80, fact: 62, status: 'risk' },
+  { name: 'Travaux de façade', plan: 45, fact: 40, status: 'progress' },
+  { name: 'Aménagement intérieur', plan: 20, fact: 8, status: 'risk' },
+  { name: 'Aménagement extérieur', plan: 0, fact: 0, status: 'wait' },
 ];
 
 const TASKS = [
-  { title: 'Трещина в несущей стене, секция Б-4', floor: '4 этаж', prio: 'Критично', tone: 'destructive', assignee: 'А. Волков' },
-  { title: 'Несоответствие отметок перекрытия', floor: '7 этаж', prio: 'Высокий', tone: 'warning', assignee: 'М. Орлова' },
-  { title: 'Проверить гидроизоляцию кровли', floor: 'Кровля', prio: 'Средний', tone: 'primary', assignee: 'Д. Кузнецов' },
-  { title: 'Замена оконных блоков фасад Юг', floor: '2 этаж', prio: 'Низкий', tone: 'muted', assignee: 'И. Соколова' },
+  { title: 'Fissure dans un mur porteur, section B-4', floor: 'Étage 4', prio: 'Critique', tone: 'destructive', assignee: 'A. Dubois' },
+  { title: 'Non-conformité des niveaux de dalle', floor: 'Étage 7', prio: 'Élevé', tone: 'warning', assignee: 'M. Laurent' },
+  { title: 'Vérifier l\'étanchéité de la toiture', floor: 'Toiture', prio: 'Moyen', tone: 'primary', assignee: 'D. Martin' },
+  { title: 'Remplacement des fenêtres façade Sud', floor: 'Étage 2', prio: 'Faible', tone: 'muted', assignee: 'I. Moreau' },
 ];
 
 const AI_FORECAST = [
-  { label: 'Инженерные сети', risk: 78, eta: '+9 дней', note: 'Дефицит бригад · поставка задержана' },
-  { label: 'Внутренняя отделка', risk: 64, eta: '+5 дней', note: 'Зависит от завершения сетей' },
-  { label: 'Фасадные работы', risk: 22, eta: 'в графике', note: 'Темп стабилен' },
+  { label: 'Réseaux techniques', risk: 78, eta: '+9 jours', note: 'Manque d\'équipes · livraison retardée' },
+  { label: 'Aménagement intérieur', risk: 64, eta: '+5 jours', note: 'Dépend de l\'achèvement des réseaux' },
+  { label: 'Travaux de façade', risk: 22, eta: 'dans les délais', note: 'Rythme stable' },
 ];
 
 const toneMap: Record<string, string> = {
@@ -116,7 +116,7 @@ const Index = () => {
             <Icon name="Sparkles" size={15} className="text-accent" />
             <span className="text-xs font-mono text-accent uppercase tracking-wider">AI Engine</span>
           </div>
-          <p className="text-xs text-muted-foreground leading-relaxed">Прогноз обновлён 4 мин назад. Обнаружено 2 зоны риска по срокам.</p>
+          <p className="text-xs text-muted-foreground leading-relaxed">Prévision mise à jour il y a 4 min. 2 zones de risque détectées sur les délais.</p>
         </div>
       </aside>
 
@@ -127,16 +127,16 @@ const Index = () => {
           <div>
             <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono">
               <span className="w-2 h-2 rounded-full bg-success animate-pulse-dot" />
-              LIVE · ЖК «Северный квартал», корпус 3
+              LIVE · Résidence « Quartier Nord », bâtiment 3
             </div>
-            <h1 className="font-display font-semibold text-xl sm:text-2xl mt-1">Мониторинг реновации</h1>
+            <h1 className="font-display font-semibold text-xl sm:text-2xl mt-1">Suivi de rénovation</h1>
           </div>
           <div className="flex items-center gap-3">
             <button className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition glow-primary">
               <Icon name="Download" size={16} />
-              Экспорт отчёта
+              Exporter le rapport
             </button>
-            <div className="w-9 h-9 rounded-full bg-secondary border border-border grid place-items-center font-mono text-sm">ПР</div>
+            <div className="w-9 h-9 rounded-full bg-secondary border border-border grid place-items-center font-mono text-sm">PR</div>
           </div>
         </header>
 
@@ -151,7 +151,7 @@ const Index = () => {
               >
                 <p className="text-xs text-muted-foreground uppercase tracking-wide">{k.label}</p>
                 <div className="flex items-end gap-1.5 mt-2">
-                  <span className={`font-display font-bold text-4xl ${toneMap[k.color]} text-glow`}>{k.value}</span>
+                  <span className={`font-display font-bold text-4xl ${toneMap[k.color]}`}>{k.value}</span>
                   <span className="text-muted-foreground text-sm mb-1.5">{k.unit}</span>
                 </div>
                 <div className={`mt-2 inline-flex items-center gap-1 text-xs font-mono ${toneMap[k.color]}`}>
@@ -170,28 +170,28 @@ const Index = () => {
                 <span className="text-xs font-mono uppercase tracking-wider">BIM · Digital Twin</span>
               </div>
               <div className="absolute top-4 right-4 z-10 flex gap-2">
-                {['Конструктив', 'Сети', 'Отделка'].map((t, i) => (
+                {['Structure', 'Réseaux', 'Finitions'].map((t, i) => (
                   <span key={t} className={`text-[11px] px-2.5 py-1 rounded-md border ${i === 0 ? 'bg-primary/15 border-primary/40 text-primary' : 'border-border text-muted-foreground'}`}>{t}</span>
                 ))}
               </div>
               <div className="relative h-[340px] sm:h-[420px] overflow-hidden">
-                <img src={BIM_IMAGE} alt="BIM-модель объекта" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" />
+                <img src={BIM_IMAGE} alt="Maquette BIM du bâtiment" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-x-0 h-px bg-primary/60 animate-scan" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
               </div>
               <div className="px-5 py-4 flex items-center justify-between border-t border-border">
                 <div className="flex items-center gap-6">
                   <div>
-                    <p className="text-[11px] text-muted-foreground uppercase">Элементов модели</p>
+                    <p className="text-[11px] text-muted-foreground uppercase">Éléments du modèle</p>
                     <p className="font-mono text-lg text-foreground">14 820</p>
                   </div>
                   <div>
-                    <p className="text-[11px] text-muted-foreground uppercase">Связано с задачами</p>
+                    <p className="text-[11px] text-muted-foreground uppercase">Liés aux tâches</p>
                     <p className="font-mono text-lg text-accent">312</p>
                   </div>
                 </div>
-                <button className="flex items-center gap-2 text-sm text-primary hover:text-glow transition">
-                  Открыть 3D <Icon name="Maximize2" size={15} />
+                <button className="flex items-center gap-2 text-sm text-primary hover:opacity-80 transition">
+                  Ouvrir la 3D <Icon name="Maximize2" size={15} />
                 </button>
               </div>
             </div>
@@ -200,9 +200,9 @@ const Index = () => {
             <div className="glass rounded-2xl p-5 flex flex-col">
               <div className="flex items-center gap-2 mb-1">
                 <Icon name="Brain" size={18} className="text-accent" />
-                <h3 className="font-display font-semibold text-lg">AI-прогноз отклонений</h3>
+                <h3 className="font-display font-semibold text-lg">Prévision IA des écarts</h3>
               </div>
-              <p className="text-xs text-muted-foreground mb-5">Модель оценивает риск срыва сроков по текущим данным площадки.</p>
+              <p className="text-xs text-muted-foreground mb-5">Le modèle évalue le risque de dépassement des délais selon les données du chantier.</p>
               <div className="space-y-4 flex-1">
                 {AI_FORECAST.map((f) => (
                   <div key={f.label} className="rounded-xl bg-secondary/40 border border-border p-3.5">
@@ -222,7 +222,7 @@ const Index = () => {
               </div>
               <div className="mt-4 flex items-center gap-2 text-xs text-accent font-mono">
                 <Icon name="Activity" size={14} />
-                Точность модели: 89%
+                Précision du modèle : 89 %
               </div>
             </div>
           </section>
@@ -234,7 +234,7 @@ const Index = () => {
               <div className="flex items-center justify-between mb-5">
                 <div className="flex items-center gap-2">
                   <Icon name="CalendarRange" size={18} className="text-primary" />
-                  <h3 className="font-display font-semibold text-lg">График работ · план / факт</h3>
+                  <h3 className="font-display font-semibold text-lg">Planning · prévu / réalisé</h3>
                 </div>
                 <span className="text-xs font-mono text-muted-foreground">Q3 2026</span>
               </div>
@@ -256,9 +256,9 @@ const Index = () => {
                 ))}
               </div>
               <div className="mt-5 flex items-center gap-5 text-[11px] text-muted-foreground">
-                <span className="flex items-center gap-1.5"><span className="w-3 h-1.5 rounded bg-muted-foreground/40" /> План</span>
-                <span className="flex items-center gap-1.5"><span className="w-3 h-1.5 rounded bg-primary" /> Факт</span>
-                <span className="flex items-center gap-1.5"><span className="w-3 h-1.5 rounded bg-warning" /> Зона риска</span>
+                <span className="flex items-center gap-1.5"><span className="w-3 h-1.5 rounded bg-muted-foreground/40" /> Prévu</span>
+                <span className="flex items-center gap-1.5"><span className="w-3 h-1.5 rounded bg-primary" /> Réalisé</span>
+                <span className="flex items-center gap-1.5"><span className="w-3 h-1.5 rounded bg-warning" /> Zone de risque</span>
               </div>
             </div>
 
@@ -267,9 +267,9 @@ const Index = () => {
               <div className="flex items-center justify-between mb-5">
                 <div className="flex items-center gap-2">
                   <Icon name="ListChecks" size={18} className="text-accent" />
-                  <h3 className="font-display font-semibold text-lg">Замечания</h3>
+                  <h3 className="font-display font-semibold text-lg">Réserves</h3>
                 </div>
-                <span className="text-xs font-mono px-2 py-0.5 rounded bg-destructive/15 text-destructive">28 откр.</span>
+                <span className="text-xs font-mono px-2 py-0.5 rounded bg-destructive/15 text-destructive">28 ouv.</span>
               </div>
               <div className="space-y-3">
                 {TASKS.map((t) => (
@@ -291,9 +291,9 @@ const Index = () => {
           {/* Analytics row */}
           <section className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
             {[
-              { title: 'Динамика готовности', val: '64%', stroke: 'hsl(174 90% 50%)', pts: [30, 34, 38, 41, 47, 52, 58, 64], hint: 'за 8 недель' },
-              { title: 'Закрытие замечаний', val: '+11/нед', stroke: 'hsl(84 90% 55%)', pts: [4, 6, 5, 9, 7, 10, 8, 11], hint: 'темп растёт' },
-              { title: 'Отклонение по срокам', val: '−6 дн', stroke: 'hsl(38 95% 58%)', pts: [-1, -2, -2, -3, -4, -4, -5, -6], hint: 'требует внимания' },
+              { title: 'Évolution de l\'avancement', val: '64%', stroke: 'hsl(184 80% 38%)', pts: [30, 34, 38, 41, 47, 52, 58, 64], hint: 'sur 8 semaines' },
+              { title: 'Clôture des réserves', val: '+11/sem', stroke: 'hsl(150 65% 38%)', pts: [4, 6, 5, 9, 7, 10, 8, 11], hint: 'rythme en hausse' },
+              { title: 'Écart de délais', val: '−6 j', stroke: 'hsl(32 90% 46%)', pts: [-1, -2, -2, -3, -4, -4, -5, -6], hint: 'à surveiller' },
             ].map((c) => (
               <div key={c.title} className="glass rounded-2xl p-5">
                 <div className="flex items-center justify-between mb-3">
@@ -307,7 +307,7 @@ const Index = () => {
           </section>
 
           <footer className="text-center text-xs text-muted-foreground font-mono pt-2 pb-4">
-            RENOVA AI · Платформа мониторинга реновации · данные демо-объекта
+            RENOVA AI · Plateforme de suivi de rénovation · données de démonstration
           </footer>
         </div>
       </main>
